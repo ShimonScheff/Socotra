@@ -1,6 +1,6 @@
 {
   "name": "Socotra",
-  "description": "Build web apps using TypeScript Node.JS Express.js and Angular ",
+  "description": "Build web apps using TypeScript Node.JS Express.js and Angular",
   "version": "0.0.1",
   "private": true,
   "author": "Ariel Henryson",
@@ -9,8 +9,7 @@
     "express-handlebars": "^3.0.0",
     "mongolian": "^0.1.18",
     "typescript": "^1.8.10",
-    "typings": "^0.8.1",
-    "validator": "^5.2.0"
+    "typings": "^0.8.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
