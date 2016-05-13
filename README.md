@@ -1,6 +1,6 @@
 #Socotra
-##Build web apps using TypeScript Node.JS Express and Angular
-Socotra is a MVC Web Framework for building scalable, high-performance Web Applications
+##Socotra is a MVC Web Framework for building scalable, high-performance Web Applications
+Build web apps using TypeScript Node.JS Express Angular and MongoDB
 
 the project is still in its early stages and under heavy development
 
