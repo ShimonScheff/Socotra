@@ -1,0 +1,20 @@
+{
+  "name": "QWNode",
+  "description": "A TypeScript Node.JS starter template",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Ariel Henryson",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "mongolian": "^0.1.18",
+    "typescript": "^1.8.10",
+    "typings": "^0.8.1",
+    "validator": "^5.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-tsc": "^1.1.5"
+  }
+}

@@ -1,0 +1,12 @@
+{
+	"appName": "QW Node", 
+	"version": "0.0.1",
+	"dbName": "Socotra",
+	"systemEmail": "no-replay@qwikwiz.com",
+	"httpServer":true,
+	"httpsServer":true,
+	"httpPort": 3000,
+	"httpsPort": 8080,
+	"serverRoot": "/Users/Ariel/WebstormProjects/QWNode/.build/",
+	"handlebarsTemplateEngine": true
+}

@@ -1,0 +1,12 @@
+[
+ {
+ 	"path": "/",
+ 	"controller": "index",
+ 	"middlewares": []
+ },
+ {
+ 	"path": "/api/signup",
+ 	"controller": "signupAPI",
+ 	"middlewares": []
+ }
+]
