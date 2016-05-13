@@ -12,7 +12,7 @@ $ npm install
 ```
 
 
-To compile your code to javascript and run server
+To compile your code to javascript and run
 ```bash
-$ gulp run 
+$ npm start
 ```
