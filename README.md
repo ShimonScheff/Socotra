@@ -8,5 +8,10 @@
 ## Installation
 
 ```bash
+Install dependencies:
 $ npm install
+
+
+To compile your code to javascript and run server
+()
 $ gulp run 
