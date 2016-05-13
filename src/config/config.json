@@ -1,7 +1,7 @@
 {
-	"appName": "QW Node", 
+	"appName": "Socotrae",
 	"version": "0.0.1",
-	"dbName": "Socotra",
+	"dbName": "MainDB",
 	"systemEmail": "no-replay@qwikwiz.com",
 	"httpServer":true,
 	"httpsServer":true,
