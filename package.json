@@ -1,6 +1,6 @@
 {
-  "name": "QWNode",
-  "description": "A TypeScript Node.JS starter template",
+  "name": "Socotra",
+  "description": "Build web apps using TypeScript Node.JS Express.js and Angular ",
   "version": "0.0.1",
   "private": true,
   "author": "Ariel Henryson",
