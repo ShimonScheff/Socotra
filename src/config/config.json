@@ -8,5 +8,9 @@
 	"httpPort": 3000,
 	"httpsPort": 8080,
 	"serverRoot": "/Users/Ariel/WebstormProjects/QWNode/.build/",
-	"handlebarsTemplateEngine": true
+	"handlebarsTemplateEngine": true,
+	"dbPort": 27017,
+	"dbHost": "localhost",
+	"dbUserName": "",
+	"dbUserPasswrod": ""
 }

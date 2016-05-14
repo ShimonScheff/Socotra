@@ -3,50 +3,22 @@
 
 "use strict";
 
-import ns = require('../core/lib/validator');
+import {Auth} from '../models/auth.mod';
 
 module.exports = (req, res) => {
-	let email: String = req.query.email.toLowerCase();
-	const password: String = req.query.password;
+	let email: string = req.query.email.toLowerCase();
+	const password: string = req.query.password;
 
-	//check if the client send email and password
-	//for creating the new user and if not reject the request
-	if(typeof email === "undefined") {
-		res.send({
-			status: false,
-			error: "Missing email value",
-			errorCode: 1
-		});
-		return;
-	}
+	
 
-	if (typeof password === "undefined") {
-		res.send({
-			status: false,
-			error: "Missing password value",
-			errorCode: 2
-		});
-		return;
-	}
+	let AuthOBJ = new Auth();
+	let createUser = AuthOBJ.createUser(email, password);
+	createUser.then((results) => {
+		if(results.error) {
+			console.log(results);
+		}
 
-	const valditor = new ns.Core.Validator();
-	if(!valditor.isValidEmail(email)) {
-		res.send({
-			status: false,
-			error: "invalid email value",
-			errorCode: 3
-		});
-		return;
-	}
-
-	if (!valditor.isValidPassword(password)) {
-		res.send({
-			status: false,
-			error: "invalid password At least one number, one lowercase and one uppercase letter at least six characters",
-			errorCode: 4
-		});
-		return;
-	}
-
-	res.send("Email: " + email + " Password: " + password);
+		console.log(results.msg);
+		res.send("Email: " + email + " Password: " + password);
+	});
 };

@@ -2,16 +2,19 @@
 (() => {
 	"use strict";
 
-	const config = require('../config/config.json');
+	const path = require("path");
+	let config = require('../config/config.json');
+	config.serverRoot = path.join(__dirname, '../');
 	const routes = require(config.serverRoot + 'config/routes.json');
 	const fs = require("fs");
-	const path = require("path");
 	const http = require('http');
 	const https = require('https');
 	const express = require('express');
 	const exphbs = require('express-handlebars');
 	const app = express();
 
+
+	console.log(config.serverRoot);
 
 
 	//set view engine
@@ -29,7 +32,6 @@
 		app.set('view engine', '.view.html');
 		app.enable('view cache');
 	}
-
 
 	//setting the static folder fo the app
 	app.use(express.static(path.join(config.serverRoot, '../src/public')));
@@ -56,7 +58,7 @@
 
 
 	//reducing the http header size 
-	//by removeing x powerd by
+	//by removing x-powered-by
 	app.disable('x-powered-by');
 
 
@@ -64,7 +66,7 @@
 	if (config.httpServer) {
 		const httpServer = http.createServer(app);
 		httpServer.listen(config.httpPort, () => {
-			console.log(config.appName + ' http server listening on port ' + config.httpPort);
+			console.log(`${config.appName} http server listening on port ${config.httpPort}`);
 		});
 	}
 
@@ -79,7 +81,7 @@
 		const httpsServer = https.createServer(sslConfig, app);
 
 		httpsServer.listen(config.httpsPort, () => {
-			console.log(config.appName + ' https server listening on port ' + config.httpsPort);
+			console.log(`${config.appName} https server listening on port ${config.httpsPort}`);
 		});
 	}
 })();

@@ -1,10 +1,9 @@
 /// <reference path="../core/_all.d.ts" />
 
 
-import ns = require ('../core/lib/db');
+import {DB} from  '../core/lib/db';
 
-
-class demo extends ns.Core.DB {
+class demo extends DB {
 	constructor() {
 		super();
 
