@@ -12,5 +12,10 @@
 	"dbPort": 27017,
 	"dbHost": "localhost",
 	"dbUserName": "",
-	"dbUserPasswrod": ""
+	"dbUserPassword": "",
+	"smtp": {
+		"user": "sokotraqw@gmail.com",
+		"password": "QWE1234567890",
+		"host":"smtp.gmail.com"
+	}
 }

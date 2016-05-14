@@ -17,14 +17,12 @@ export class DB {
 		// Create a server instance with default host and port
 		const server = new Mongolian(config.dbHost + ":" + config.dbPort);
 
-		"mongo.example.com:12345"
-
 		this.db = server.db(config.dbName);
 
-		if (typeof config.dbUserPasswrod !== undefined &&
-			config.dbUserPasswrod.length) {
+		if (typeof config.dbUserPassword !== undefined &&
+			config.dbUserPassword.length) {
 			// Authenticate a database
-			this.db.auth(config.dbUserName, config.dbUserPasswrod);
+			this.db.auth(config.dbUserName, config.dbUserPassword);
 		}
 	}
 }

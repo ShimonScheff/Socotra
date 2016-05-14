@@ -3,6 +3,7 @@
 
 import {DB} from  '../core/lib/db';
 import * as validator from '../core/lib/validation';
+import {Email}  from '../core/lib/email';
 import * as crypto from 'crypto';
 
 export class Auth extends DB {
@@ -32,6 +33,11 @@ export class Auth extends DB {
 		});		
 	}
 
+	private sendMailToNewUser(email: string) {
+		let emailTest = new Email();
+		emailTest.send();
+	}
+
 	private makeNewUser(email: string, password: string) {
 
 		const solt = crypto.randomBytes(16).toString('hex');
@@ -46,6 +52,8 @@ export class Auth extends DB {
 			solt: solt,
 			password: hashPassword,
 		};
+
+		this.sendMailToNewUser(email);
 
 		return new Promise((resolve) => {
 			this.db.collection("users").insert(newUser, (err) => {
