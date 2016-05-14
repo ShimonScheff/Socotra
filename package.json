@@ -5,6 +5,7 @@
   "private": true,
   "author": "Ariel Henryson",
   "dependencies": {
+    "body-parser": "^1.15.1",
     "express": "^4.13.4",
     "express-handlebars": "^3.0.0",
     "mongolian": "^0.1.18",

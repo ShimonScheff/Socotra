@@ -3,6 +3,7 @@
 
 import {DB} from  '../core/lib/db';
 import * as validator from '../core/lib/validation';
+import * as crypto from 'crypto';
 
 export class Auth extends DB {
 	constructor() {
@@ -32,11 +33,18 @@ export class Auth extends DB {
 	}
 
 	private makeNewUser(email: string, password: string) {
+
+		const solt = crypto.randomBytes(16).toString('hex');
+		const hashPassword = crypto
+			.createHmac("sha256", solt)
+			.update(password)
+			.digest('hex');
+
 		const newUser = {
 			UTC: new Date(),
 			email: email,
-			password: password,
-			salt: Math.random()
+			solt: solt,
+			password: hashPassword,
 		};
 
 		return new Promise((resolve) => {
