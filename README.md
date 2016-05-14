@@ -6,6 +6,14 @@ The project is still in its early stages and under heavy development
 
 
 ## Installation
+Download the files to your computer
+```bash
+$ git clone https://github.com/qwikwiz/Socotra
+```
+Move to download directory
+```bash
+$ cd Socotra
+```
 Install dependencies:
 ```bash
 $ npm install
