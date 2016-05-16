@@ -2,7 +2,6 @@
 
 
 "use strict";
-
 import {Auth} from '../models/auth.mod';
 
 module.exports = (req, res) => {

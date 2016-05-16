@@ -14,9 +14,16 @@
     "typings": "^0.8.1"
   },
   "devDependencies": {
+    "glob": "^7.0.3",
     "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-foreach": "^0.1.0",
+    "gulp-layout": "0.0.3",
+    "gulp-mjml": "^1.0.1",
     "gulp-nodemon": "^2.0.6",
-    "gulp-tsc": "^1.1.5"
+    "gulp-tsc": "^1.1.5",
+    "mjml": "^2.0.3",
+    "mkdirp": "^0.5.1"
   },
   "scripts": {
     "start": "gulp run"

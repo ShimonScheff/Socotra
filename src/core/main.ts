@@ -15,9 +15,6 @@
 	const app = express();
 
 
-	console.log(config.serverRoot);
-
-
 	//set view engine
 	if (config.handlebarsTemplateEngine) {
 		app.set('views', config.serverRoot + '/views');

@@ -2,9 +2,13 @@
 
 
 import {DB} from  '../core/lib/db';
-import * as validator from '../core/lib/validation';
+import * as validator from '../core/lib/generic/validation';
 import {Email}  from '../core/lib/email';
 import * as crypto from 'crypto';
+
+
+const path = require("path");
+var fs = require('fs');
 
 export class Auth extends DB {
 	constructor() {
@@ -33,13 +37,19 @@ export class Auth extends DB {
 		});		
 	}
 
-	private sendMailToNewUser(email: string) {
-		let emailTest = new Email();
-		emailTest.send();
+	private async sendMailToNewUser(email: string) {
+		let emailObj = new Email();
+		let template = await emailObj.render('test', {body:"this is the body"});
+		const emailOptions = {
+			subject: "test email",
+			to: "ariel@qwikwiz.com",
+			html: template
+		};
+		emailObj.send(emailOptions);
+		console.log("test email was sent");
 	}
 
 	private makeNewUser(email: string, password: string) {
-
 		const solt = crypto.randomBytes(16).toString('hex');
 		const hashPassword = crypto
 			.createHmac("sha256", solt)

@@ -4,6 +4,16 @@
  	"controller": "index",
  	"middlewares": []
  },
+  {
+ 	"path": "/a",
+ 	"controller": "index",
+ 	"middlewares": ["auth","demo"]
+ },
+  {
+ 	"path": "/b",
+ 	"controller": "index",
+ 	"middlewares": []
+ },
  {
  	"path": "/api/signup",
  	"controller": "signupAPI",

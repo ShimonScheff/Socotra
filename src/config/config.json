@@ -17,5 +17,23 @@
 		"user": "sokotraqw@gmail.com",
 		"password": "QWE1234567890",
 		"host":"smtp.gmail.com"
+	},
+	"srcFolder": "./src/**",
+    "srcTSFiles": "./src/**/*.ts",
+    "serverStart": "./.build/core/main.js",
+    "buildDir": "./.build",
+    "emailMainLayout": "./src/views/email/layouts/main.layout.mjml",
+    "emailSrcDir": "./src/views/email/*.mjml",
+    "emailBuildDir":"./.build/views/email/build/",
+    "emailPartialsBuild": "./.build/views/email/partialsBuild",
+    "NODE_ENV": "development",
+    "NodeTSOptions": {
+		"target": "es6",
+		"module": "commonjs",
+		"sourceMap": false,
+		"emitDecoratorMetadata": true,
+	    "experimentalDecorators": true,
+	    "removeComments": true,
+	    "noImplicitAny": false
 	}
 }
